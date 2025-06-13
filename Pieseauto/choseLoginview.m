@@ -19,7 +19,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "Reachability.h"
 #import "butoncustomback.h"
-
+l
 @interface choseLoginview(){
     NSMutableArray* Cells_Array;
 }
@@ -396,14 +396,6 @@
     [MBProgressHUD hideAllHUDsForView:self.navigationController.visibleViewController.view animated:YES];
 }
 -(void)doFacebookLogin: (NSString*) FBTOKEN :(NSString *) telefon {
-    /*
-     elenaciobanu1
-     lambina
-     ioan.ungureanu@activesoft.ro
-     ioanungureanu
-     wHdspd4DVAc
-     {"os":"android","lang":"ro","access_token":"EAACtlLk5PTsBAGV9l7ECFvyuEobYfck3NChCsXXY1OZBNE4xtwogLZBQ1p3EmkWohlhgRx5ZCbvu7ohVgnNJpt4xA8bvPb2qBnuXqILToTcpJ4HJa7cNfP2OK09sRqBFOZAUbxB1zy6bvqxjP6GDZCSdLNcmHMT8ZD","version":1}
-     */
     
     
     Reachability *internetReach = [Reachability reachabilityForInternetConnection];
@@ -507,25 +499,25 @@
             } else {
                 /*
                  
-                 my strin m=login&p={"tel":"0726744222","os":"iOS","lang":"ro","access_token":"EAACtlLk5PTsBAMGXRIl4YaSJrC4uMQUIquTe6pJQ1ZAZAeNHwpr2aUx6dTpnZAvBurLNRbO3XRZB6dduWetl6gig0oR8etqH3DwrXfxNEx4KovNokLjxJdiZBf5JdI6q55YNVH9KHrGaUyVsXJabezt6YR0AYe5ZBO523EzTxtQAZDZD","version":"9.2.1"}
+                 my strin m=login&p={"tel":"n","os":"iOS","lang":"ro","access_token":"secret","version":"9.2.1"}
                  2016-06-17 14:21:33.676 Piese auto[13202:3266906] JSON: {
                  data =     {
-                 authtoken = 124964g5763dc8cgJk0QuwZedhpG2tGtdfGtqEZxNUt95LibVygpwNmu7Z8;
-                 "user_id" = 1198436;
-                 username = demchog;
+                 authtoken = secret;
+                 "user_id" = secret;
+                 username = secret;
                  };
                  errors =     {
                  };
                  }
                  2016-06-17 14:21:33.676 Piese auto[13202:3266906] ERORS (
                  )
-                 2016-06-17 14:21:33.677 Piese auto[13202:3266906] autohtoken 124964g5763dc8cgJk0QuwZedhpG2tGtdfGtqEZxNUt95LibVygpwNmu7Z8
+                 2016-06-17 14:21:33.677 Piese auto[13202:3266906] autohtoken secret
                  2016-06-17 14:21:33.686 Piese auto[13202:3266906] dateuser but not in {
                  }
                  2016-06-17 14:21:33.686 Piese auto[13202:3266906] DictionarDate facebook {
-                 authtoken = 124964g5763dc8cgJk0QuwZedhpG2tGtdfGtqEZxNUt95LibVygpwNmu7Z8;
-                 "user_id" = 1198436;
-                 username = demchog;
+                 authtoken = secret;
+                 "user_id" = secret;
+                 username = secret;
                  }
                  
                  */
