@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Nu mai afișa acest mesaj"; ObjectID = "70W-9B-MQK"; */
+"70W-9B-MQK.text" = "Nu mai afișa acest mesaj";
+
+/* Class = "UIButton"; normalTitle = "Am înțeles"; ObjectID = "Apn-7y-t3O"; */
+"Apn-7y-t3O.normalTitle" = "Am înțeles";
+
+/* Class = "UILabel"; text = "1. Ceri oferta piesa \n\n2. Magazinele de piese si\nparcurile de dezmembrari iti \ntrimit ofertele de pret\n\n3. Tu alegi oferta \ncastigatoare"; ObjectID = "Eq1-SW-tBB"; */
+"Eq1-SW-tBB.text" = "1. Ceri oferta piesa \n\n2. Magazinele de piese si\nparcurile de dezmembrari iti \ntrimit ofertele de pret\n\n3. Tu alegi oferta \ncastigatoare";
+
+/* Class = "UILabel"; text = "Află mai multe"; ObjectID = "nkH-sS-pei"; */
+"nkH-sS-pei.text" = "Află mai multe";
+
+/* Class = "UILabel"; text = "Cumpără piese auto în 3 pași simpli"; ObjectID = "q3I-bz-26F"; */
+"q3I-bz-26F.text" = "Cumpără piese auto în 3 pași simpli";

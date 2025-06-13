@@ -1,0 +1,95 @@
+//
+//  pieseauto.pch
+//  Pieseauto
+//
+//  Created by Ioan Ungureanu on 29/02/16.
+//  Copyright © 2016 Activesoft. All rights reserved.
+//
+
+/*#ifndef pieseauto_pch
+#define pieseauto_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif 
+ */
+/* pieseauto_pch */
+
+//"${PODS_ROOT}/Fabric/run" 2225b6d430e6e8c49ec174c88ca7958760747a2e 0fc61368436334cb5b93d6bb320b8a0bfe21f800e37c5f9043575e1b7a6c8706
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+////#import "Language.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import "MBProgressHUD.h"
+
+////#define MyLocalizedString(key, alt) [Language get:key alter:alt]
+
+#endif
+#define base_url @"dev5.activesoft.ro:277/" // dev server
+//#define base_url @"pieseauto.ro:277/" //live server
+//metode
+#define METODA_INIT @"m=init&p=" // init cere date ->ok
+#define METODA_LOGIN @"m=login&p=" // login -> ok
+#define METODA_REGISTER @"m=register&p=" //register ->ok
+#define METODA_CERERE_ADD @"m=cerere_add&p=" // adauga cerere noua
+#define METODA_NOTIFY_COUNT @"m=notify_count&p=" // adauga cerere noua
+#define METODA_FORGOT_PASSWORD @"m=forgot_password&p=" //forgot_password email
+#define METODA_LIST_CERERI @"m=list_cereri&p=" // preia lista cereri cu params
+#define METODA_LIST_OFFERS @"m=list_offers&p=" // preia lista oferte cu params
+#define METODA_GET_PROFILE @"m=get_profile&p=" //preia profil user logat de la server
+#define METODA_EDIT_PROFILE @"m=edit_profile&p=" //trimite la server date editate de user
+#define METODA_CHANGE_EMAIL @"m=change_email&p=" //trimite la server email modificat de user
+// echo 'm=offer_prefered&p={"offer_id": 1826651, "is_prefered": 1,"authtoken":"1248f7g5719f33bgKREY4f9PM_CIAPRTmTg2ME4RMbFgDC9sYiiDpaYU8PA","version":"9.0"}'  | curl --tlsv1 --cacert ./dev5.activesoft.crt --data @- -- https://dev5.activesoft.ro:277/
+#define METODA_OFFER_PREFERED @"m=offer_prefered&p=" //trimite  la server oferta selectata ca preferata
+#define METODA_CHANGE_PASSWORD @"m=change_password&p=" //trimite  la server parola veche si noua
+#define METODA_GET_OFFER @"m=get_offer&p=" //preia date oferta dupa id
+#define METODA_GET_COMMENTS @"m=get_comments&p=" //aduce comentarii pe id de cerere sau oferta
+#define METODA_CERERE_AUTOCOMPLETE @"m=cerere_autocomplete&p=" //returneaza model_id, talon_an_fabricatie, motorizare din ultimele 5 cereri ale user-ului
+#define METODA_CERERE_CANCEL @"m=cerere_cancel&p=" //anuleaza o cerere
+#define METODA_GET_ORDER_FORM @"m=get_order_form&p=" //preia detalii inainte de comanda
+#define METODA_SET_WINNING_OFFER @"m=set_winning_offer&p=" //trimite comanda si oferta devine castigatoare
+#define METODA_CANCEL_WINNING_OFFER @"m=cancel_winning_offer&p=" //anuleaza oferta castigatoare
+#define METODA_COMMENT_ADD  @"m=comment_add&p=" //adauga un comentariu la cerere sau oferta
+#define METODA_CERERE_REOPEN @"m=cerere_reopen&p=" // in cazul unei cereri rezolvate cu id cerere
+#define METODA_GET_MEMBER_PROFILE @"m=get_member_profile&p=" // ia user profile pe user_id sau username
+#define METODA_LIST_RATINGS @"m=list_ratings&p=" //ia calificative
+#define METODA_ADD_RATING @"m=add_rating&p=" //acorda calificative
+#define METODA_LIST_NOTIFICATIONS @"m=list_notifications&p=" //lista notificari
+#define METODA_NOTIFICATION_VIEWED @"m=notification_viewed&p=" //s-a vazut notificarea
+#define METODA_SET_PUSH_TOKEN @"m=set_push_token&p=" //se trimite vendor token
+#define METODA_COMMENT_VIEWED @"m=comment_viewed&p=" //se trimite ca s-a citit intrebarea
+/*
+ "comment_viewed" tb. apelat pe https://marvelapp.com/2511ee4#11557872 ( messageid-ul este ultimul comentariu din "comments" cu is_viewed=0 )
+ respectiv pe https://marvelapp.com/2511ee4#11251891 ( messageid-ul este ultimul comentariu dintr-o discutie cu is_viewed=0 )
+ */
+/*
+ "set_push_token"
+ Permite maxim 20 de token-uri per user, sterge token-urile mai vechi din baza noastra de date si apeleaza deleteSubscriber.
+ ex. parametrii: {
+     "vendorToken": "dummy-token",
+     "appInfo": {"appVersion" : "123"},
+     "phoneId": "dummy-phoneid",
+     "osType": "android",
+     "osInfo": {"osVersion": "5.1.1", "timeZone": "GMT+3"}
+ } 
+
+ */
+/* prin nsuserdef si app del
+
+AUTH_TOKEN_PIESE
+USERNAME_PIESE
+E_LOGAT 1 sau 0
+
+ 
+PREFERINTE_NOTIFICARI 1 2 3 -> 1 = În aplicație 2 = Pe e-mail 3=În aplicație și pe e-mail
+del.NOTIFY_COUNT
+*/
